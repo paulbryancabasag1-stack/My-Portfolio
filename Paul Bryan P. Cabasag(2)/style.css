@@ -1,0 +1,147 @@
+
+/* Basic Page Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+header h2 {
+    color: #222;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 15px;
+}
+
+nav a:hover {
+    color: #777;
+}
+
+/* Home Section */
+.home {
+    background-color: #e8e8e8;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.home h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.home h3 {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* General Sections */
+section {
+    padding: 40px 10%;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+/* Cards */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card ul {
+    padding-left: 25px;
+}
+
+/* Java Code */
+.code-box {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.code-box h3 {
+    margin-bottom: 15px;
+}
+
+.code-box pre {
+    white-space: pre-wrap;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    section {
+        padding: 30px 6%;
+    }
+
+    .home h1 {
+        font-size: 27px;
+    }
+}
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+    margin-bottom: 15px;
+}

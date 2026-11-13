@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <h2>My Portfolio</h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#java">Java Code</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <img src="Profile.png.jpg"
+     alt="My Profile Picture"
+     class="profile-picture">
+        
+        <h1>Hello! I'm Paul Bryan P. Cabasag</h1>
+        <h3>First Year BSIT Student</h3>
+        <p>
+            Welcome to my personal portfolio website.
+            This website contains information about myself,
+            my education, skills, and programming activities.
+        </p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>Personal Information</h2>
+        <p><b>Name:</b> Paul Bryan P. Cabasag</p>
+        <p><b>Course:</b> Bachelor of Science in Information Technology</p>
+        <p><b>Year Level:</b> First Year</p>
+        <p><b>School:</b> OLSHCO</p>
+        <p><b>Email:</b> paulbryancabasag1@gmail.com</p>
+
+        <h3>About Me</h3>
+        <p>
+            I am an IT student who is interested in computers,
+            programming, and technology. I am still learning
+            and improving my skills in web development and Java programming.
+        </p>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Educational Background</h2>
+
+        <div class="card">
+            <h3>College</h3>
+            <p>OLSHCO</p>
+            <p>BS Information Technology - First Year</p>
+        </div>
+
+        <div class="card">
+            <h3>Senior High School</h3>
+            <p>Triala National High School</p>
+            <p>HUMSS</p>
+        </div>
+
+        <div class="card">
+            <h3>Junior High School</h3>
+            <p>Triala National High School</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <div class="card">
+            <h3>Technical Skills</h3>
+            <ul>
+                <li>Basic HTML</li>
+                <li>Basic CSS</li>
+                <li>Java Programming</li>
+                <li>Microsoft Office</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Other Skills</h3>
+            <ul>
+                <li>Problem Solving</li>
+                <li>Teamwork</li>
+                <li>Communication</li>
+                <li>Willingness to Learn</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Java Code Section -->
+    <section id="java">
+        <h2>My Java Project</h2>
+        <p>
+            This section contains my final performance task
+            in CC102. It is a console-based game developed using Java.
+        </p>
+
+        <div class="code-box">
+            <h3>Java Source Code</h3>
+            <pre><code>
+import java.util.Scanner;
+
+public class LibraryBookBorrowingAnalyzer {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int[] books = new int[15];
+        int total = 0;
+        int mostBooks = 0;
+        int countAtLeastFive = 0;
+
+        // Input books borrowed by 15 students
+        for (int i = 0; i < books.length; i++) {
+
+            while (true) {
+                System.out.print("Enter books borrowed by Student "
+                        + i + ": ");
+
+                if (sc.hasNextInt()) {
+                    int input = sc.nextInt();
+
+                    if (input >= 0) {
+                        books[i] = input;
+                        break;
+                    } else {
+                        System.out.println(
+                                "Invalid input! Enter a nonnegative integer.");
+                    }
+
+                } else {
+                    System.out.println(
+                            "Invalid input! Enter an integer.");
+                    sc.next();
+                }
+            }
+
+            total += books[i];
+
+            if (books[i] >= 5) {
+                countAtLeastFive++;
+            }
+
+            if (books[i] > mostBooks) {
+                mostBooks = books[i];
+            }
+        }
+
+        // Calculate average
+        double average = (double) total / books.length;
+
+        // Display results
+        System.out.println("\n===== BORROWING ANALYSIS =====");
+
+        System.out.println("Total books borrowed: " + total);
+        System.out.printf("Average books borrowed: %.2f\n", average);
+
+        System.out.println("Most books borrowed: " + mostBooks);
+        System.out.println("Student(s) who borrowed the most:");
+
+        for (int i = 0; i < books.length; i++) {
+            if (books[i] == mostBooks) {
+                System.out.println("Student index: " + i);
+            }
+        }
+
+        System.out.println(
+                "Students who borrowed at least 5 books: "
+                + countAtLeastFive);
+
+        sc.close();
+    }
+}
+            </code></pre>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>My Personal Portfolio | BSIT Student</p>
+        <p>Created using HTML and CSS</p>
+    </footer>
+
+</body>
+</html>
